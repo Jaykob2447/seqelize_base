@@ -17,12 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       model: {
         type: DataTypes.STRING(40),
         allowNull: false,
-        validate: { is: /^[A-Z][a-z]$/, len: [2, 40] },
+        validate: { len: [2, 40] },
       },
       brand: {
         type: DataTypes.STRING(40),
         allowNull: false,
-        validate: { is: /^[A-Z][a-z]$/, len: [2, 40] },
+        validate: { len: [2, 40] },
       },
       year_of_prod: { type: DataTypes.DATEONLY, validate: { isDate: true } },
       ram: { type: DataTypes.INTEGER, validate: { isInt: true } },
