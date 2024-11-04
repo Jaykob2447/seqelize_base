@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       year_of_prod: { type: DataTypes.DATEONLY, validate: { isDate: true } },
       ram: { type: DataTypes.INTEGER, validate: { isInt: true } },
       cpu: { type: DataTypes.STRING(40), validate: { len: [2, 40] } },
-      screen_diagonal: { type: DataTypes.STRING(8), validate: { len: [1, 8] } },
+      screen_diagonal: { type: DataTypes.FLOAT },
       have_nfc: { type: DataTypes.BOOLEAN },
     },
     {
