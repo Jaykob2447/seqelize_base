@@ -2,8 +2,9 @@ module.exports.errorHeandler = (err, req, res, next) => {
   if (res.headersSent) {
     return;
   }
-  const massage = err.massage || "Server Error";
+  console.log(err);
   const status = err.status || 500;
+  const massage = err.massage || "Server Error";
 
-  res.status(status).send(massage);
+  res.status(status).send([{ status, detail: massage }]);
 };
